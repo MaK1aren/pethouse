@@ -51,9 +51,42 @@
 
 <div class="container">
 
-  Contacts
+  <form method="POST" action="https://yandex.ru">
+    <div class="modal-body">
+      <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Ф.И.О.</label>
+      <input type="text" class="form-control" id="FIO" required placeholder="Как к вам обращаться?">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Адрес электронной почты</label>
+      <input type="email" class="form-control" id="usermail" required placeholder="Ваш email">
+    </div>
+    <div class="modal-footer">
+  <button type="submit" class="btn btn-success">Отправить</button>
 </div>
+</div>
+  </form>
+</div>
+<div class="toolbar-container"></div>
+<div id="editor"></div>
+<script src="ckeditor5/ckeditor.js"></script>
 
+<script>
+	DecoupledEditor
+		.create( document.querySelector( '#editor' ), {
+			// toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
+		} )
+		.then( editor => {
+			const toolbarContainer = document.querySelector( 'main .toolbar-container' );
+
+			toolbarContainer.prepend( editor.ui.view.toolbar.element );
+
+			window.editor = editor;
+		} )
+		.catch( err => {
+			console.error( err.stack );
+		} );
+</script>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
