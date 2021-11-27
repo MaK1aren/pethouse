@@ -85,14 +85,27 @@
         <h5 class="modal-title" id="staticBackdropLabel">Погулять</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+      <form method="POST" action="https://yandex.ru">
       <div class="modal-body">
-        ...
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Ф.И.О.</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" required placeholder="Как вас зовут?">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Ваш email</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" required placeholder="Введите свою электронную почту">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Дата прогулки</label>
+          <input type="date" class="form-control" id="exampleFormControlInput1" required placeholder="Время">
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-        <button type="button" class="btn btn-primary"></button>
+        <button type="submit" class="btn btn-primary">Забронировать</button>
       </div>
     </div>
+  </form>
   </div>
 </div>
 
@@ -105,16 +118,32 @@
         <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-        ...
+      <form method="POST" action="https://yandex.ru">
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Номер карты:</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" required placeholder="16 цифр">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Дата</label>
+            <input type="date" class="form-control" id="exampleFormControlInput1" required placeholder="Годен до...">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Имя владельца</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" required placeholder="IVAN IVANOV">
+          </div>
+          <label for="exampleFormControlInput1" class="form-label">CVS</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" required placeholder="3 цифры с обратной стороны карточки">
+          </div>
+          <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+          <button type="submit" class="btn btn-primary">Поддержать</button>
+        </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
-      </div>
-    </div>
+    </form>
   </div>
 </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   </body>
